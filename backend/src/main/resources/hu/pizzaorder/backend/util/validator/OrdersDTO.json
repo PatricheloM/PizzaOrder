@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "LoginDTO",
+  "description": "An order form.",
+  "type": "object",
+  "properties": {
+    "username": {
+      "description": "Username of order.",
+      "type": "string"
+    },
+    "pizzaIds": {
+      "description": "Ordered pizzas.",
+      "type": "array"
+    },
+    "time": {
+      "description": "Order time",
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": ["username", "pizzaIds", "time"],
+  "additionalProperties": false
+}

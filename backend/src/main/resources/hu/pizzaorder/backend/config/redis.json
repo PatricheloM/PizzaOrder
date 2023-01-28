@@ -1,0 +1,9 @@
+{
+  "host": "localhost",
+  "port": 6379,
+  "timeout": 0,
+  "password": "password",
+  "maxPool": 64,
+  "maxIdlePool": 64,
+  "minIdlePool": 16
+}

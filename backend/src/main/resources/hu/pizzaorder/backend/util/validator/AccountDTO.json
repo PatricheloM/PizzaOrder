@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "LoginDTO",
+  "description": "A registration form.",
+  "type": "object",
+  "properties": {
+    "username": {
+      "description": "Username of registration form.",
+      "type": "string"
+    },
+    "password": {
+      "description": "SHA-1 encrypted hash of registration form's password.",
+      "type": "string"
+    },
+    "email": {
+      "description": "Email of account.",
+      "type": "string",
+      "format": "email"
+    },
+    "postcode": {
+      "description": "Postcode of account.",
+      "type": "number"
+    },
+    "city": {
+      "description": "City of registration form.",
+      "type": "string"
+    },
+    "addr1": {
+      "description": "Address1 of registration form.",
+      "type": "string"
+    },
+    "addr2": {
+      "description": "Address2 of registration form.",
+      "type": "string"
+    }
+  },
+  "required": ["username", "password", "email", "postcode", "city", "addr1"],
+  "additionalProperties": false
+}

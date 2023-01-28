@@ -1,0 +1,26 @@
+---
+version: '3.1'
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: pizzaorder-db
+    restart: always
+    expose:
+        - "3306"
+    ports:
+        - "3306:3306"
+    environment:
+        MARIADB_ROOT_PASSWORD: root
+        MARIADB_DATABASE: pizzaorder
+        MARIADB_USER: user
+        MARIADB_PASSWORD: root
+  redis:
+    container_name: pizzaorder-redis
+    image: redis:alpine
+    command: ["redis-server", "/etc/redis/redis.conf"]
+    volumes:
+      - ./redis.conf:/etc/redis/redis.conf
+    expose:
+      - "6379"
+    ports:
+      - "6379:6379"
